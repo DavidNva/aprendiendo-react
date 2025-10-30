@@ -1,0 +1,80 @@
+# ==========================================
+# 🧠 .gitignore - Curso Aprendiendo React
+# (cubre todos los proyectos dentro de /projects)
+# ==========================================
+
+# 🔹 Dependencias de Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# 🔹 Archivos de compilación / build
+dist/
+build/
+out/
+.vite/
+.cache/
+coverage/
+.DS_Store
+
+# 🔹 Configuración del entorno local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 🔹 Archivos del sistema / temporales
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# 🔹 Archivos del editor
+.vscode/
+.idea/
+*.code-workspace
+
+# 🔹 Backups de Windows / Mac
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+Icon?
+.Spotlight-V100
+.Trashes
+
+# 🔹 Archivos de VS Code Live Share o cache
+.history/
+*.VSCodeCounter/
+*.vsix
+
+# 🔹 Archivos de pruebas automáticas o herramientas
+coverage/
+jest/
+*.tsbuildinfo
+
+# 🔹 Build output de proyectos individuales dentro de /projects
+projects/**/node_modules/
+projects/**/dist/
+projects/**/.vite/
+projects/**/coverage/
+projects/**/build/
+
+# 🔹 Archivos generados temporalmente por Vite
+vite.config.ts.timestamp-*
+vite.config.js.timestamp-*
+
+# 🔹 Archivos de sistema ocultos
+*.DS_Store
+*.Thumbs.db
+
+# ==========================================
+# Fin del .gitignore
+# ==========================================

@@ -1,20 +1,15 @@
+import React from 'react';
 import './App.css'
+import { TwitterFollowCard } from './TwitterFollowCard.jsx'
 
 export function App(){
     return (
-        <article className='tw-followCard'>
-            <header className='tw-followCard-header'>
-                <img className='tw-followCard-avatar' alt="El avatar de David" src="https://davidnavadev.netlify.app/images/perfil_original.webp"></img>
-                <div className='tw-followCard-info'>
-                    <strong>David Nava Garcia</strong>
-                    <span className='tw-followCard-infoUserName'>@davidng</span>
-                </div>
-            </header>
-            <aside>
-                <button className='tw-followCard-button'>
-                    Seguir
-                </button>
-            </aside>
-        </article>
+        //Esta siguiente forma es de hacer React.Fragment
+        <section className='App'>
+            <TwitterFollowCard userName="DavidNvaG" name="David Nava Garcia"></TwitterFollowCard>
+            <TwitterFollowCard userName="elonmusk" name="Elon Musk"></TwitterFollowCard>
+            <TwitterFollowCard userName="midudev" name="Miguel Angel Duran"></TwitterFollowCard>
+        </section>
+        
     )
 }

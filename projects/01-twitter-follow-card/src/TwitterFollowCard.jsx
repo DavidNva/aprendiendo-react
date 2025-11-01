@@ -1,7 +1,8 @@
-import { useState } from "react"
-export function TwitterFollowCard({children,userName = 'unknown'}){
-                            //Como crear un estado
+import { useState } from 'react'
+
+export function TwitterFollowCard({children, userName='uknown'}){//Como crear un estado
     const [isFollowing, setIsFollowing] = useState(false)
+    console.log('[TwitterFollowCard] render with userName: ', userName)
     
     const text = isFollowing? 'Suguiendo' : 'Seguir'
     const buttonClassName = isFollowing

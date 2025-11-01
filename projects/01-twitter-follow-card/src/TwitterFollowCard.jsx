@@ -1,20 +1,17 @@
 import { useState } from "react"
-export function TwitterFollowCard({children,userName = 'unknown', isFollowing}){
-    const state = useState(false)//Tenemos que decirle cual es el valor por defecto de ese estado
-    //Este state devuelve un array, un array de dos posiciones 
-    const isFollowing = state[0]//La primera posicion es el valor del estado: 
-    const setIsFollowing = state[1]//La segunda posicion, lo que tenemso es una funcion que nos va a permitir actualizar el estado para la nueva versión 
+export function TwitterFollowCard({children,userName = 'unknown'}){
+                            //Como crear un estado
+    const [isFollowing, setIsFollowing] = useState(false)
     
-    //Si queremos evitarnos escribir 3 lineas por cada useState que tengamos, en js tenemso desestructuracion, donde podemos  en una sola linea decirle, 
-    const [isFollowing, setIsFollowing1] = useState(false)//Tenemos que decirle cual es el valor por defecto de ese estado y es lo mismo que las 3 lineas de codigo anteriores 
-     
-(false)
     const text = isFollowing? 'Suguiendo' : 'Seguir'
     const buttonClassName = isFollowing
                             ? 'tw-followCard-button is-following'
                             : 'tw-followCard-button'
 
-                            //Como crear un estado
+    const handleClick = ()=>{
+        setIsFollowing(!isFollowing)//De falso a verdadero o viceversa segun este el estado en el momento 
+    }//Seria un estado interno, porque esta al nivel de cada uno de los elementos que crea el componente, no esta compartido entre elementos
+
     return (
         <article className='tw-followCard'>
             <header className='tw-followCard-header'>
@@ -26,7 +23,7 @@ export function TwitterFollowCard({children,userName = 'unknown', isFollowing}){
                 </div>
             </header>
             <aside>
-                <button className={buttonClassName}>
+                <button className={buttonClassName} onClick={handleClick}>
                     {text}
                 </button>
             </aside>
